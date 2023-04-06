@@ -10,13 +10,13 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MovieDao {
-    @Query("SELECT * FROM movies")
+    @Query("SELECT * FROM movies ORDER BY release_date DESC")
     fun getAllMovie(): Flow<List<MovieEntity>>
 
-    @Query("SELECT * FROM movies ORDER BY vote_count DESC, vote_average DESC")
+    @Query("SELECT * FROM movies ORDER BY release_date DESC, vote_average DESC")
     fun getPopularMovie(): Flow<List<MovieEntity>>
 
-    @Query("SELECT * FROM movies ORDER BY vote_average DESC")
+    @Query("SELECT * FROM movies ORDER BY vote_count DESC, vote_average DESC")
     fun getTopRatedMovie(): Flow<List<MovieEntity>>
 
     @Query("SELECT * FROM movies WHERE is_favorite = 1")
