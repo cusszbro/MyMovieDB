@@ -24,6 +24,7 @@ class FavoriteActivity : AppCompatActivity() {
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "Favorite Movies"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         favoriteAdapter = FavoriteAdapter()
         favoriteAdapter.onItemClick = { movie ->
@@ -50,5 +51,10 @@ class FavoriteActivity : AppCompatActivity() {
             setHasFixedSize(true)
             adapter = favoriteAdapter
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

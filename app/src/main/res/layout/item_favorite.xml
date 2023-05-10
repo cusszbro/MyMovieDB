@@ -12,9 +12,12 @@
         android:id="@+id/iv_item_poster"
         android:layout_width="95dp"
         android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:layout_marginVertical="2dp"
         android:contentDescription="Movie poster"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <LinearLayout
         android:layout_width="0dp"
