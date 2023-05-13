@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     private val abc = "abc"
     private val def = "def"
+    private val xyz = "xyz"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
