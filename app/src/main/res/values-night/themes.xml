@@ -1,22 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyMovieDB" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.MyMovieDB" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Color. -->
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/navy_800</item>
+        <item name="colorPrimaryVariant">@color/navy_900</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/yellow_500</item>
+        <item name="colorSecondaryVariant">@color/yellow_700</item>
+        <item name="colorOnSecondary">@color/white</item>
         <!-- Error brand color. -->
         <item name="colorError">@color/red</item>
         <item name="colorError">@color/white</item>
         <!-- Background brand color. -->
         <item name="android:colorBackground">@color/black</item>
         <item name="colorOnBackground">@color/white</item>
+        <!-- Surface brand color. -->
+        <item name="colorSurface">@color/navy_900</item>
+        <item name="colorOnSurface">@color/white</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:statusBarColor">@color/navy_900</item>
         <!-- Customize your theme here. -->
+
+
     </style>
 </resources>

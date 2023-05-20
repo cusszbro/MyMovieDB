@@ -28,56 +28,25 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <include
+                android:id="@+id/popular_movie_layout"
+                layout="@layout/popular_movie_layout"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:text="Popular Movie"
-                android:textSize="20sp"
-                android:gravity="start|center"
-                android:paddingHorizontal="16dp"
-                android:fontFamily="@font/poppins_semibold"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_popular"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:listitem="@layout/item_popular"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                android:layout_marginBottom="4dp"/>
 
-            <TextView
+            <include
+                android:id="@+id/top_rated_layout"
+                layout="@layout/top_rated_movie_layout"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:text="Top Rated"
-                android:textSize="20sp"
-                android:gravity="start|center"
-                android:paddingHorizontal="16dp"
-                android:fontFamily="@font/poppins_semibold"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_top_rated"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:listitem="@layout/item_top_rated"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                android:layout_marginBottom="4dp"/>
 
-            <TextView
+            <include
+                android:id="@+id/now_plating_layout"
+                layout="@layout/now_playing_movie_layout"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:text="Now Playing"
-                android:textSize="20sp"
-                android:gravity="start|center"
-                android:paddingHorizontal="16dp"
-                android:fontFamily="@font/poppins_semibold"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_now_playing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:listitem="@layout/item_top_rated"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

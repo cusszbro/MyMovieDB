@@ -44,8 +44,8 @@ class TopRatedAdapter: RecyclerView.Adapter<TopRatedAdapter.ViewHolder>() {
                 tvTitleTopRated.text = data.title
                 tvTitleTopRated.isSingleLine = true
                 tvTitleTopRated.isSelected = true
-                tvItemRelease.isVisible = false
-                tvRateTopRated.isVisible = false
+                tvItemRelease.visibility = View.GONE
+                tvRateTopRated.visibility = View.GONE
             }
         }
     }

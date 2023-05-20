@@ -1,9 +1,12 @@
 package com.luthfirr.mymoviedb.ui.favorite
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.activity.viewModels
 import com.luthfirr.mymoviedb.core.domain.model.Movie
 import com.luthfirr.mymoviedb.databinding.ActivityFavoriteBinding
@@ -24,7 +27,6 @@ class FavoriteActivity : AppCompatActivity() {
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "Favorite Movies"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         favoriteAdapter = FavoriteAdapter()
         favoriteAdapter.onItemClick = { movie ->
@@ -33,7 +35,9 @@ class FavoriteActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         observeFavorite()
+        initListener()
     }
 
     private fun observeFavorite() {
@@ -53,8 +57,10 @@ class FavoriteActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
+    private fun initListener() {
+        binding.topAppBar.setNavigationOnClickListener {
+            finish()
+        }
     }
+
 }

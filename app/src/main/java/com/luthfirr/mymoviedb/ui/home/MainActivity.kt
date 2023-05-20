@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     private val mainViewModel: MainViewModel by viewModels()
 
-    private val abc = "abc"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -75,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                         popularMovieAdapter.setData(movie.data)
 
                         // set adapter of rvListMovie
-                        binding.rvPopular.apply {
+                        binding.popularMovieLayout.rvPopular.apply {
                             setHasFixedSize(true)
                             adapter = popularMovieAdapter
                         }
@@ -102,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                         topRatedAdapter.setData(movie.data)
 
                         // set adapter of rvListMovie
-                        binding.rvTopRated.apply {
+                        binding.topRatedLayout.rvTopRated.apply {
                             setHasFixedSize(true)
                             adapter = topRatedAdapter
                         }
@@ -129,7 +127,7 @@ class MainActivity : AppCompatActivity() {
                         nowPlayingAdapter.setData(movie.data)
 
                         // set adapter of rvListMovie
-                        binding.rvNowPlaying.apply {
+                        binding.nowPlatingLayout.rvNowPlaying.apply {
                             setHasFixedSize(true)
                             adapter = nowPlayingAdapter
                         }

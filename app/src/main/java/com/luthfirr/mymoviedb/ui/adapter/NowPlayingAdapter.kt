@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.FitCenter
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.luthfirr.mymoviedb.core.domain.model.Movie
@@ -47,6 +46,9 @@ class NowPlayingAdapter: RecyclerView.Adapter<NowPlayingAdapter.ViewHolder>() {
                 tvTitleTopRated.ellipsize = TextUtils.TruncateAt.END
                 tvRateTopRated.text = "Rate : ${data.voteAverage}"
                 tvReleaseTopRated.text = data.releaseDate
+                tvItemRelease.visibility = View.VISIBLE
+                tvReleaseTopRated.visibility = View.VISIBLE
+                tvRateTopRated.visibility = View.VISIBLE
             }
         }
     }

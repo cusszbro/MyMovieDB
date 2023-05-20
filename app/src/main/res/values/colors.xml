@@ -10,4 +10,18 @@
     <color name="red">#C3092D</color>
 
     <color name="transparent">#00FFFFFF</color>
+
+    <color name="yellow_200">#fef49c</color>
+    <color name="yellow_500">#fde938</color>
+    <color name="yellow_700">#f9be2a</color>
+    <color name="blue_200">#8fc8f9</color>
+    <color name="blue_700">#1a73d2</color>
+
+    <color name="navy_800">#260d8d</color>
+    <color name="navy_900">#000080</color>
+
+
+
+
+
 </resources>
